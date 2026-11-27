@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia, misión, visión y valores de Urban Feet.">
+    <title>Conócenos | URBAN FEET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul: #172b4d;
+            --azul-claro: #315b86;
+            --naranja: #f2a23a;
+            --fondo: #f5f7fa;
+            --texto: #263447;
+            --blanco: #fff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background: var(--fondo); color: var(--texto); line-height: 1.7; }
+        header {
+            background: var(--azul); color: var(--blanco); padding: 18px 7%;
+            display: flex; align-items: center; justify-content: space-between; gap: 20px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.15);
+        }
+        .marca { color: white; text-decoration: none; font-size: 1.35rem; font-weight: 800; letter-spacing: 1px; }
+        .marca span { color: var(--naranja); }
+        nav { display: flex; flex-wrap: wrap; gap: 18px; }
+        nav a { color: white; text-decoration: none; font-size: .9rem; transition: color .25s; }
+        nav a:hover { color: var(--naranja); }
+        .portada {
+            min-height: 390px; padding: 80px 8%; display: grid; place-items: center; text-align: center;
+            color: white; background: linear-gradient(120deg, rgba(12,28,52,.94), rgba(36,77,117,.82)),
+            url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=85') center/cover;
+        }
+        .portada-contenido { max-width: 850px; }
+        .etiqueta { color: var(--naranja); font-weight: 700; letter-spacing: 3px; font-size: .8rem; }
+        h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); line-height: 1.15; margin: 14px 0; }
+        .portada p { max-width: 720px; margin: 0 auto; color: #edf2f8; }
+        main { width: min(1100px, 88%); margin: 55px auto; }
+        .introduccion { text-align: center; max-width: 850px; margin: 0 auto 38px; }
+        .introduccion h2, .seccion-titulo { color: var(--azul); font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 12px; }
+        .tarjeta {
+            background: white; border-radius: 18px; padding: 30px;
+            box-shadow: 0 8px 25px rgba(20,42,70,.07);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .tarjeta:hover { transform: translateY(-6px); box-shadow: 0 15px 32px rgba(20,42,70,.13); }
+        .historia { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: center; margin-bottom: 32px; }
+        .historia img { width: 100%; height: 320px; object-fit: cover; border-radius: 18px; box-shadow: 0 10px 25px rgba(0,0,0,.12); }
+        .historia h2 { color: var(--azul); margin-bottom: 12px; }
+        .historia p + p { margin-top: 12px; }
+        .rejilla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 25px 0 40px; }
+        .icono { font-size: 2rem; margin-bottom: 10px; }
+        .tarjeta h3 { color: var(--azul-claro); margin-bottom: 9px; font-size: 1.25rem; }
+        .valores { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 25px 0 42px; }
+        .valor { background: white; border-radius: 15px; padding: 20px 15px; text-align: center; box-shadow: 0 6px 18px rgba(20,42,70,.06); transition: .3s; }
+        .valor:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(20,42,70,.12); }
+        .valor h3 { color: var(--azul-claro); font-size: 1rem; margin: 8px 0; }
+        .valor p { font-size: .86rem; }
+        .cierre { text-align: center; padding: 38px 25px; border-radius: 20px; color: white; background: linear-gradient(120deg, var(--azul), var(--azul-claro)); margin: 20px 0 55px; }
+        .cierre h2 { font-size: 1.8rem; margin-bottom: 10px; }
+        .boton {
+            display: inline-block; margin-top: 20px; padding: 12px 24px; border-radius: 30px;
+            background: var(--naranja); color: #172b4d; font-weight: 700; text-decoration: none;
+            transition: transform .25s, box-shadow .25s, background .25s;
+        }
+        .boton:hover { transform: scale(1.05); background: #ffc36c; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+        footer { background: #101f37; color: #dbe4ef; text-align: center; padding: 27px 15px; font-size: .88rem; }
+        footer strong { color: var(--naranja); }
+        @media (max-width: 800px) {
+            .historia { grid-template-columns: 1fr; }
+            .valores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 560px) {
+            header { flex-direction: column; text-align: center; }
+            nav { justify-content: center; gap: 12px; }
+            .rejilla { grid-template-columns: 1fr; }
+            .valores { grid-template-columns: 1fr; }
+            main { width: 90%; margin: 35px auto; }
+            .tarjeta { padding: 23px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="marca" href="index.html">URBAN<span>FEET.</span></a>
+        <nav aria-label="Navegación de la página">
+            <a href="index.html">Inicio</a>
+            <a href="#narrativa">Nuestra historia</a>
+            <a href="#mision">Misión</a>
+            <a href="#vision">Visión</a>
+            <a href="#valores">Valores</a>
+        </nav>
+    </header>
+
+    <section class="portada">
+        <div class="portada-contenido">
+            <span class="etiqueta">IDENTIDAD · ESTILO · AUTENTICIDAD</span>
+            <h1>Conoce el mundo de Urban Feet</h1>
+            <p>Más que una marca de ropa, somos una comunidad que cree que cada persona tiene una historia y un estilo propio que merece ser expresado.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="introduccion" id="narrativa">
+            <h2>Nuestra narrativa digital</h2>
+            <p>Una historia que conecta con quienes viven la moda a su manera.</p>
+        </section>
+
+        <section class="historia">
+            <div class="tarjeta">
+                <span class="etiqueta">NUESTROS COMIENZOS</span>
+                <h2>De una idea juvenil a una marca con identidad</h2>
+                <p>Urban Feet nació en 2023, en Jaén, Cajamarca, a partir de una idea sencilla: ofrecer pantalones vaqueros modernos, cómodos y accesibles para jóvenes que desean expresar quiénes son a través de su forma de vestir.</p>
+                <p>El proyecto comenzó como una pequeña iniciativa entre jóvenes interesados en la moda urbana. Al observar que muchas personas buscaban prendas actuales sin dejar de lado la comodidad y el precio, decidimos crear una propuesta que reuniera esas características.</p>
+                <p>Con el tiempo, imaginamos una marca cercana, creativa y abierta a todos los estilos. Hoy, Urban Feet representa la confianza para elegir, combinar y crear una imagen propia.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1000&q=85" alt="Ropa de estilo urbano en una tienda de moda">
+        </section>
+
+        <section class="rejilla">
+            <article class="tarjeta" id="mision">
+                <div class="icono">🎯</div>
+                <h3>Nuestra misión</h3>
+                <p>Ofrecer pantalones vaqueros modernos, cómodos y de buena calidad para jóvenes y personas que disfrutan de la moda urbana, brindándoles variedad de diseños y una atención amable, mediante productos accesibles que les permitan expresar su personalidad y sentirse seguros con su estilo.</p>
+            </article>
+            <article class="tarjeta" id="vision">
+                <div class="icono">🚀</div>
+                <h3>Nuestra visión</h3>
+                <p>Convertirnos en una marca juvenil reconocida en Jaén y otras ciudades del Perú por nuestros diseños, calidad y cercanía con los clientes, creciendo de manera responsable y llegando a más personas a través de nuestras plataformas digitales.</p>
+            </article>
+        </section>
+
+        <section id="valores">
+            <div class="introduccion">
+                <h2 class="seccion-titulo">Los valores que nos representan</h2>
+                <p>Son los principios que orientan nuestras decisiones, nuestro trato y la forma en que construimos Urban Feet.</p>
+            </div>
+            <div class="valores">
+                <article class="valor"><div class="icono">🤝</div><h3>Respeto</h3><p>Valoramos la diversidad de gustos, ideas y estilos de cada persona.</p></article>
+                <article class="valor"><div class="icono">⭐</div><h3>Responsabilidad</h3><p>Cumplimos nuestros compromisos y cuidamos cada detalle de nuestro servicio.</p></article>
+                <article class="valor"><div class="icono">💡</div><h3>Creatividad</h3><p>Buscamos nuevas ideas y diseños que inspiren a nuestros clientes.</p></article>
+                <article class="valor"><div class="icono">💬</div><h3>Honestidad</h3><p>Ofrecemos información clara sobre nuestros productos y precios.</p></article>
+                <article class="valor"><div class="icono">❤️</div><h3>Compromiso</h3><p>Trabajamos con dedicación para mejorar y brindar una buena experiencia.</p></article>
+            </div>
+        </section>
+
+        <section class="tarjeta" id="sobre-nosotros">
+            <h2 class="seccion-titulo">Sobre nosotros</h2>
+            <p>Somos Urban Feet, un emprendimiento juvenil dedicado a la moda urbana y especializado en pantalones vaqueros. Nos identifica la idea de que la ropa no debe limitarte: debe acompañarte y ayudarte a mostrar tu personalidad.</p>
+            <p>Nuestra historia es la de un equipo que decidió transformar su interés por la moda en una propuesta comercial. Empezamos con una colección pequeña y el propósito de escuchar a nuestros clientes para conocer sus preferencias, mejorar nuestros productos y crecer junto a nuestra comunidad.</p>
+            <p>Nos esforzamos por ofrecer una experiencia de compra sencilla, cercana y confiable, tanto en nuestro catálogo digital como en la atención directa.</p>
+        </section>
+
+        <section class="cierre">
+            <h2>Tu estilo también forma parte de nuestra historia.</h2>
+            <p>Gracias por conocer y ser parte del universo Urban Feet.</p>
+            <a class="boton" href="index.html">← Volver a la página principal</a>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>URBAN FEET</strong> · La moda no se sigue, se crea.</p>
+        <p>© 2026 Urban Feet. Proyecto de emprendimiento escolar.</p>
+    </footer>
+</body>
+</html>
